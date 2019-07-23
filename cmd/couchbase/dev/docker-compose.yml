@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  couchbase: 
+    container_name: couchbase
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ~/couchbase/go-couchbase:/opt/couchbase/var
+    ports:
+      - 8091:8091
+      - 8092:8092 
+      - 8093:8093 
+      - 11210:11210
